@@ -1,0 +1,76 @@
+/*------------------------------------*\
+  VARIABLES
+\*------------------------------------*/
+
+:root {
+    --color: black;
+    --margin: 1rem;
+    --time: cubic-bezier(0.57, -0.2, 0.02, 1.35);
+}
+
+$breakpoints: (phone: 320px, tablet: 880px, desktop: 1024px);
+
+/*------------------------------------*\
+  GENERAL RULES
+\*------------------------------------*/
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+    color: var(--color);
+    margin: var(--margin);
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+/*------------------------------------*\
+  BACKGROUND
+\*------------------------------------*/
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(ellipse farthest-corner at 10% 20%, rgba(197, 255, 77, 1) 0%, rgba(189, 235, 255, 1) 31%, rgba(231, 255, 168, 1) 57%, rgba(245, 255, 219, 1) 76%, rgba(243, 243, 243, 1) 93%);
+    background-size: auto;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0.6;
+}
+
+
+/*------------------------------------*\
+  TM GEMS
+\*------------------------------------*/
+
+section#tm-gems {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+
+    img {
+        position:absolute;
+        width:0px;
+        height:auto;
+        transform: translateX(-50%) translateY(-50%);
+        transition: all 800ms cubic-bezier(0.57, -0.2, 0.02, 1.35);
+        transition-property: width, height;
+    }
+}
